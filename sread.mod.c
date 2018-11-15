@@ -39,6 +39,7 @@ __attribute__((section("__versions"))) = {
 	{ 0xad73041f, __VMLINUX_SYMBOL_STR(autoremove_wake_function) },
 	{ 0x1afae5e7, __VMLINUX_SYMBOL_STR(down_interruptible) },
 	{ 0xa1c76e0a, __VMLINUX_SYMBOL_STR(_cond_resched) },
+	{ 0x4215a929, __VMLINUX_SYMBOL_STR(__wake_up) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
 	{ 0xb1ad28e0, __VMLINUX_SYMBOL_STR(__gnu_mcount_nc) },
@@ -50,4 +51,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "DEDE03F478BF9B68DF884A4");
+MODULE_INFO(srcversion, "03D767D5DA86150A3365E7B");

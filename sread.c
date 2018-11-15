@@ -3,6 +3,7 @@
 #include <linux/gpio.h>
 #include <linux/interrupt.h>
 #include <linux/semaphore.h>
+#include <linux/wait.h>
 
 #define GPIO_BUTTON 25
 #define DEVICE_NAME "mydrv"
@@ -20,12 +21,14 @@ static int MYDRV_MAJOR;
 static irqreturn_t button_isr(int irq, void *data)
 {
 	counter++;
-	printk(KERN_INFO "Counter is %d\n", counter);
+	flag = 1;
+	wake_up_interruptible(&wq);
 	return IRQ_HANDLED;
 }
 
 static ssize_t sread_read(struct file *file, char *count, size_t size, loff_t *ppos)
 {
+
 	wait_event_interruptible(wq, flag !=0);
 	if (down_interruptible(&sema)) return -ERESTARTSYS;
 	while (flag == 0){
@@ -39,7 +42,6 @@ static ssize_t sread_read(struct file *file, char *count, size_t size, loff_t *p
 	}
 	flag = 0;
 	up(&sema);
-
 
 	*count = counter;
 	return 0;
