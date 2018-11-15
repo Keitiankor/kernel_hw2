@@ -29,8 +29,18 @@ __attribute__((section("__versions"))) = {
 	{ 0xf64a8ce, __VMLINUX_SYMBOL_STR(gpiod_get_raw_value) },
 	{ 0xbaeef7b0, __VMLINUX_SYMBOL_STR(gpio_to_desc) },
 	{ 0x403f9529, __VMLINUX_SYMBOL_STR(gpio_request_one) },
-	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
+	{ 0x5b69f608, __VMLINUX_SYMBOL_STR(__register_chrdev) },
+	{ 0x9e52ac12, __VMLINUX_SYMBOL_STR(prepare_to_wait_event) },
+	{ 0xfe487975, __VMLINUX_SYMBOL_STR(init_wait_entry) },
+	{ 0x1000e51, __VMLINUX_SYMBOL_STR(schedule) },
+	{ 0x7435e0e, __VMLINUX_SYMBOL_STR(prepare_to_wait_exclusive) },
+	{ 0x4be7fb63, __VMLINUX_SYMBOL_STR(up) },
+	{ 0x98dfb43, __VMLINUX_SYMBOL_STR(finish_wait) },
+	{ 0xad73041f, __VMLINUX_SYMBOL_STR(autoremove_wake_function) },
+	{ 0x1afae5e7, __VMLINUX_SYMBOL_STR(down_interruptible) },
+	{ 0xa1c76e0a, __VMLINUX_SYMBOL_STR(_cond_resched) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
+	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
 	{ 0xb1ad28e0, __VMLINUX_SYMBOL_STR(__gnu_mcount_nc) },
 };
 
@@ -40,4 +50,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "73BB968AB399CABFAA86957");
+MODULE_INFO(srcversion, "DEDE03F478BF9B68DF884A4");
